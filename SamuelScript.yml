@@ -1,0 +1,65 @@
+SamuelGuide:
+
+  Type: Interact
+
+  Requirements: 
+
+    Mode: All
+
+    List: []
+
+  Steps: 
+
+    1: 
+
+      Click Trigger: 
+
+        Trigger: ""
+
+        Script: 
+
+          - ENGAGE
+
+          - WAIT 1
+
+          - CHAT "Heya there! I'm Samuel."
+
+          - WAIT 2
+
+          - CHAT "I'm here to help you out, I'll teach you all about chats."
+
+          - WAIT 3
+
+          - CHAT "So we have 3 main chats."
+
+          - WAIT 2
+
+          - CHAT "They are : Global (Talk to the entire server!), Local (Chat to your friends around you.) and RP (Roleplay away with your character!)"
+		  
+		      - WAIT 7
+		  
+		      - CHAT "How do you talk in each one?"
+
+          - WAIT 2
+		  
+		      - CHAT "Well, it's easy. Simple do /ch [name] (global, local, rp)."
+		  
+		      - WAIT 3
+		  
+		      - CHAT "So for example, let's say you want to ask how everyone is today."
+		  
+		      - WAIT 4
+		  
+		      - CHAT "You would do /ch global. Then, it automatically puts anything you say in global! YOu can just type 'How is everyone?' and everyone will see it!"
+		  
+		      - WAIT 8
+		  
+		      - CHAT "Same goes with local (/ch local) and RP (/ch RP)."
+		  
+		      - WAIT 3
+		  
+		      - CHAT "Good luck mate!"
+
+          - WAIT 2
+
+          - DISENGAGE
