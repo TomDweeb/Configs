@@ -1,0 +1,991 @@
+DarkClawGuide:
+
+  Type: Interact
+
+  Requirements: 
+
+    Mode: All
+
+    List: []
+
+  Steps: 
+
+    1: 
+
+      Click Trigger: 
+
+        Trigger: ""
+
+        Script: 
+
+          - ENGAGE
+
+          - WAIT 1
+
+          - CHAT "Welcome to Astela, a Medieval Roleplay server!"
+
+          - WAIT 2
+
+          - CHAT "That room you saw back along the hall had all of the staff members, so make sure to check that out eventually if you haven't already."
+
+          - WAIT 7
+
+          - CHAT "Also read the rule board at the spawn when you get a chance!"
+
+          - WAIT 2
+
+          - CHAT "To get back to this area at any time do /spawn."
+
+          - WAIT 2
+
+          - CHAT "Now continue along this pathway and talk to Ayrion for information on classes!"
+
+          - WAIT 4
+
+          - DISENGAGE
+
+             
+
+AyrionGuide: 
+
+  Type: Interact
+
+  Requirements: 
+
+    Mode: All
+
+    List: []
+
+  Steps: 
+
+    1: 
+
+      Click Trigger: 
+
+        Trigger: ""
+
+        Script: 
+
+        - if <player.has_flag[AyrionGuideComplete]> {
+
+           - CHAT "Hello! I'm going to tell you about classes."
+
+           - WAIT 2
+
+           - CHAT "Take a look at all of the options before going into a room and right clicking the NPC in there."
+
+           - WAIT 5
+
+           - CHAT "The NPC will assume you want to join that class and explain the class to you, also he will give you a quest to complete."
+
+           - WAIT 6
+
+           - CHAT "You only get one rank, and it costs money to change, so choose wisely."
+
+           - WAIT 4
+
+           - CHAT "After you have chosen your path, you will be warped to the entrance to Astela!"
+
+           - WAIT 4
+		   
+		   - CHAT "Oh, and if you ever want to rank up, walk over to the rank hall in the capital."
+		   
+		   - WAIT 3
+		   
+		   - CHAT "Do /warp capital, and walk forward (east). It's the large building that's infront of you when you pass the church."
+		   
+		   - WAIT 5
+		   
+		   - CHAT "There, find your class line and see the rank tree, and what requirements you need to move up to the next rank!"
+		   
+		   - WAIT 6
+
+           - CHAT "Have a question? Do /helpop [question] and a staff member will help you ASAP!"
+
+           - WAIT 4
+
+           - CHAT "Have fun!"
+
+           }
+
+          else {
+
+           - CHAT "Hello! I'm going to tell you about classes."
+
+           - WAIT 2
+
+           - CHAT "Take a look at all of the options before going into a room and right clicking the NPC in there."
+
+           - WAIT 5
+
+           - CHAT "The NPC will assume you want to join that class and explain the class to you, also he will give you a quest to complete."
+
+           - WAIT 6
+
+           - CHAT "You only get one rank, and it costs money to change, so choose wisely."
+
+           - WAIT 4
+
+           - CHAT "After you have chosen your path, you will be warped to the entrance to Astela!"
+
+           - WAIT 4
+		   
+		   - CHAT "Oh, and if you ever want to rank up, walk over to the rank hall in the capital."
+		   
+		   - WAIT 3
+		   
+		   - CHAT "Do /warp capital, and walk forward (east). It's the large building that's infront of you when you pass the church."
+		   
+		   - WAIT 5
+		   
+		   - CHAT "There, find your class line and see the rank tree, and what requirements you need to move up to the next rank!"
+		   
+		   - WAIT 6
+
+           - CHAT "Have a question? Do /helpop [question] and a staff member will help you ASAP!"
+
+           - WAIT 4
+
+           - CHAT "Have fun!"
+
+           - EXECUTE as_op "give <player.name> steak 10"
+
+           - FLAG player AyrionGuideComplete
+
+           - WAIT 1
+
+           }
+
+MageTutorial1:
+
+  Type: Interact
+
+  Requirements: 
+
+    Mode: All
+
+    List: []
+
+  Steps: 
+
+    1: 
+
+      Click Trigger: 
+
+        Trigger: ""
+
+        Script: 
+
+        - if <player.has_flag[MageTutorial1Complete]> 
+
+        {
+
+           - EXECUTE as_op "warp Capital"
+
+           
+
+        }
+
+          else if <player.has_flag[RangerTutorial1Complete] 
+
+        {
+
+           - EXECUTE as_op "warp Capital"
+
+        }    
+
+          else 
+
+        {
+
+           - CHAT "Good day, young one!"
+
+           - WAIT 1
+
+           - CHAT "My magic abilities enable me to call myself a Mage."
+
+           - WAIT 3
+
+           - CHAT "What is a mage? Well a Mage is someone who can channel their powers and cast spells of course."
+
+           - WAIT 5
+
+           - CHAT "Oh, I can very well see you have an affinity to magic. "
+
+           - WAIT 3
+
+           - CHAT "But not everyone is worthy to train and become as powerful as me!"
+
+           - WAIT 3
+
+           - CHAT "Hmm.. I need to brew a potion of immense swiftness"
+
+           - WAIT 3
+
+           - CHAT "Find the materials at the market, and then find me in the library, then I'll think."
+
+           - WAIT 4
+		   
+		   - CHAT "To get to the market, do /warp capital. After that, walk straight forward until you reach a big area with stalls."
+		   
+		   - WAIT 8
+		   
+		   - CHAT "That's the market. Find the guy selling needs for brewing and alchemy."
+		   
+		   - WAIT 4
+		   
+		   - CHAT "Oh, and the library, that's a rather hidden location you see."
+		   
+		   - WAIT 3
+		   
+		   - CHAT "Go to /warp capital, and then keep walking east until you reach a church  that should be to your right."
+		   
+		   - WAIT 7
+		   
+		   - CHAT "Then, walk forward to the big building, that's actually the rank hall building."
+		   
+		   - WAIT 3
+		   
+		   - CHAT "You will see mountains behind the building, to the right. Walk to it, southeast, and you'll see an entrance in it, it's pretty big."
+		   
+		   - WAIT 8
+		   
+		   - CHAT "That's the library."
+
+           - CHAT "I will be providing you some Burts so that you can buy everything you need for now, but in the future you will need to work hard to earn money."
+
+           - EXECUTE as_op "moneyadmin add 250 <player.name>"
+
+           - WAIT 6
+
+           - CHAT "I will write all the items you need down in your quest book, now go along!"
+
+           - WAIT 4
+
+           - EXECUTE as_op "questsadmin give <player.name> Mage Trial - 1"
+
+           - FLAG player MageTutorial1Complete
+
+           - EXECUTE as_op "warp Capital"
+
+        }
+
+             
+
+MageArthur: 
+
+  Type: Interact
+
+  Requirements: 
+
+    Mode: All
+
+    List: []
+
+  Steps: 
+
+    1: 
+
+      Click Trigger: 
+
+        Trigger: ""
+
+        Script: 
+
+        - if <player.has_flag[MageTrial1Complete]> {
+
+           - CHAT "Hello there, I'm Mage Arthur, if you wanna know more, I specialise in fire spells.."
+
+           - WAIT 4
+
+           - CHAT "I feel the magic coursing through your veins."
+
+           - WAIT 2
+
+           - CHAT "Hmm"
+
+           - WAIT 1
+
+           - CHAT "..."
+
+           - WAIT 1
+
+           - CHAT "I feel your affinity for magic, but I am still not sure you are worthy..."
+
+           - WAIT 4
+
+           - CHAT "I have one more task for you to complete before I can declare you a fully fledged mage!"
+
+           - WAIT 4
+
+           - CHAT "I will teach you how to use your powers, then I want you to hit a living target 10 times with your known spell!"
+
+           - WAIT 4
+
+           - CHAT "Simply look wherever you want to shoot, and Hit/'left click'!"
+
+           - WAIT 4 
+
+           - CHAT "Easy, eh? Well, it goes further. If you right click while holding your wand, you'll be displayed with spells you "learnt" or know."
+
+           - WAIT 4
+
+           - CHAT "It's only Magic Missile for now."
+
+           - WAIT 2
+
+           - CHAT "But, if you train hard and get enough SP, we can teach you more spells!"
+
+           - WAIT 4
+
+           - CHAT "Oh wait, I didn't tell you about SP, did I?"
+
+           - WAIT 4
+
+           - CHAT "SP is like the experience you get for your magic abilities"
+
+           - WAIT 4
+
+           - CHAT "Diffrent spells need diffrent amount of SP to be learned so make sure to pracice your magic and earn enough to learn a new spell"
+
+           - WAIT 5
+
+           - CHAT "Anyway, if you complete the task I assigned you you will be a mage!Onward with your task now"
+
+           - EXECUTE as_op "questsadmin give <player.name> The Mage Trial - 2"
+
+           }
+
+          else {
+
+           - CHAT "I am not intrested to whatever you want to say!"
+
+           }
+
+GiveWand: 
+
+  Type: Task
+
+  Script: 
+
+    - WAIT 1
+
+    - CHAT npc:24 "Oh you completed the task... intresting not many do."
+
+    - WAIT 3
+
+    - CHAT npc:24 "You have earned my trust, you may be worthy of becoming a mage, but first you must go to the mage camp and talk to Arthur."
+
+    - WAIT 6
+	
+	- CHAT npc:24 "To get to the mage camp, simly enter /warp magecamp."
+	
+	- WAIT 3
+
+    - CHAT npc:24 "Wait.. I have something for you."
+
+    - WAIT 2
+
+    - CHAT npc:24 "Now where did I put it....."
+
+    - FLAG player MageTrial1Complete
+
+    - WAIT 1
+
+    - NARRATE "The mage starts to pat his robe then pulls out a wand out of it."
+
+    - EXECUTE as_op "mgive mage"
+
+    - EXECUTE as_op "mage activate mageR1"
+
+    
+
+RangerTutorial1: 
+
+  Type: Interact
+
+  Requirements: 
+
+    Mode: All
+
+    List: []
+
+  Steps: 
+
+    1: 
+
+      Click Trigger: 
+
+        Trigger: ""
+
+        Script: 
+
+        - if <player.has_flag[RangerTutorial1Complete]> 
+
+        {
+
+           - EXECUTE as_op "warp Capital"
+
+        } 
+
+          else if <player.has_flag[MageTrial1Complete]>
+
+        {
+
+           - EXECUTE as_op "warp Capital"
+
+        }    
+
+          else if <player.has_flag[WarriorTutorial1Complete>  
+
+        {
+
+           - EXECUTE as_op "warp Capital"
+
+        }
+
+          else if <player.has_flag[ThiefTutorial1Complete>
+
+        {
+
+           - EXECUTE as_op "warp Capital"
+
+        }
+
+          else
+
+        {    
+
+          - ENGAGE
+
+          - WAIT 1
+
+          - CHAT "Oh, hello there..."
+
+          - WAIT 1
+
+          - CHAT "You want to become a ranger? Uhmm.. I.. can help you with that."
+
+          - WAIT 3
+
+          - CHAT "But first I wan't to see if you will be fitting to be one."
+
+          - WAIT 3
+
+          - CHAT "What is a ranger you ask?"
+
+          - WAIT 1
+
+          - CHAT "Well a ranger is someone skilled with a bow and they are skilled in taming animals."
+
+          - WAIT 4
+
+          - CHAT "Well for a first test.. I think it would be good if you showed me that you are capable of such skills."
+
+          - WAIT 5
+
+          - CHAT "I want you to go into the wild and find a horse and tame it! After that meet me on the top branch of the elven tree! That way I know you are agile enough too!"
+		  
+		  - WAIT 7
+		  
+		  - CHAT "To get to the elven tree..err..oh yeah!"
+
+          - WAIT 3
+		  
+		  - CHAT "Do /warp woodelves. The tree infront of you is the elven tree! You'll have to find the staircase inside on your own, though. It will get you to the top!"
+		  
+		  - WAIT 8
+
+          - CHAT "Good luck"
+
+          - FLAG player RangerTutorial1Complete
+
+          - EXECUTE as_op "warp capital"
+
+          - EXECUTE as_op "questsadmin give <player.name> Ranger Trial - "
+
+          - WAIT 1
+
+          - DISENGAGE 
+
+        }   
+
+
+
+          
+
+MageGroup: 
+
+  Type: Task
+
+  Script:
+
+    - EXECUTE as_server "lp user <player.name> parent add mage"
+
+    
+
+RangerTutorial2:
+
+    Type: Interact
+
+    Requirements: 
+
+    Mode: All
+
+    List: []
+
+    Steps: 
+
+     1: 
+
+       Click Trigger: 
+
+        Trigger: ""
+
+        Script: 
+
+          - ENGAGE
+
+          - WAIT 1
+
+          - CHAT "This is wonderfull, you've made it!"
+
+          - WAIT 2
+
+          - CHAT "I did not expect you to be so skilled in taming and climbing!"
+
+          - WAIT 1
+
+          - CHAT "You've covered two of the most important skills for a ranger... But there is one more... Archery!"
+
+          - WAIT 2
+
+          - CHAT "After you've increased your archery skill to uhm let's say 20... you should talk to Yinmyar, he is somewhere around here!"
+
+          - WAIT 5
+
+          - CHAT "Okay, here you go this bow and some arrows should help you get started!"
+
+          - EXECUTE as_op "give <player.name> bow 1"
+
+          - EXECUTE as_op "give <player.name> arrow 64"
+
+          - DISENGAGE
+
+     2:
+
+          
+
+YinmyarTrialComplete: 
+
+  Type: Task
+
+  Script:
+
+   1:
+
+    - WAIT 1
+
+    - CHAT npc:72 "Well done!"
+
+    - WAIT 3
+
+    - CHAT npc:72 "I've been tracking your progress on Archery! You did an amazing job."
+
+    - WAIT 6
+
+    - CHAT npc:72 "So you have the taming skill, the agility and the skills with the bow!"
+
+    - WAIT 2
+
+    - CHAT npc:72 "I see no reason not to call you one of us, Ranger"
+
+    - WAIT 1
+
+    - EXECUTE as_server "lp user <player.name> parent add ranger"
+
+   2:
+
+    - CHAT npc:72 "Well done, you did all that for nothing! You chose another class at the begining remember?"
+
+
+
+
+
+
+
+ThiefTutorial1:
+
+  Type: Interact
+
+  Requirements: 
+
+    Mode: All
+
+    List: []
+
+  Steps: 
+
+    1: 
+
+      Click Trigger: 
+
+        Trigger: ""
+
+        Script: 
+
+          - ENGAGE
+
+          - WAIT 1
+
+          - CHAT "... What do you want?"
+
+          - WAIT 2
+
+          - CHAT "Oh.. You want to become a thief? Interesting."
+
+          - WAIT 1
+
+          - CHAT "Hmm, If you show me you are capable of it, I'll give you the title!"
+
+          - WAIT 2
+
+          - CHAT "Oh, are you asking me how to do that for me? That's easy, Show me you can steal 5 Astelons from that old merchant near the Keep."
+
+          - WAIT 4
+
+          - CHAT "What are you waiting for? Get on with it!"
+
+          - EXECUTE as_op "questsadmin give <player.name> The Thief Trial - 1" 
+
+          - WAIT 1
+
+          - CHAT "Oh, give the money to Johnny, he'll be in the main Bandit cave. We also have a thief guild, by the way, it's in the capital across the church!"
+		  
+		  - WAIT 7
+		  
+		  - CHAT "To get to Johnny, do /warp banditcave, he's to your right by the table."
+
+          - EXECUTE as_op "warp Capital"
+
+          - ZAP ThiefTutorial1:2
+
+          - ZAP MageTutorial1:2
+
+          - ZAP RangerTutorial1:2
+
+          - ZAP WarriorTutorial1:2
+
+          - DISENGAGE
+
+    2:      
+
+        Click Trigger:
+
+            Trigger: ""
+
+            Script:
+
+            - EXECUTE as_player "warp Capital"
+
+    
+
+MerchantSteal: 
+
+  Type: interact
+
+  Requirements: 
+
+    Mode: All
+
+    List: []
+
+  Steps: 
+
+    1: 
+
+      Click Trigger: 
+
+        Trigger: ""
+
+        Script: 
+
+          - ENGAGE
+
+          - WAIT 1
+
+          - EXECUTE as_op "moneyadmin add 2500 <player.name>"
+
+          - CHAT "Ahh, What a nice Day today- Hey! Come Back Here!"
+
+          - DISENGAGE
+
+           
+
+ThiefTutorialJohnny:
+
+  Type: Task
+
+  Script: 
+
+    - WAIT 1
+
+    - CHAT npc:56 "Ahh, great! Thanks For those! But you are still not finished!"
+
+    - WAIT 4
+
+    - CHAT npc:56 "Talk to Master Thief over by the Pond! you have another mission!"
+
+     
+
+ThiefTutorial2:
+
+  Type: Interact
+
+  Requirements: 
+
+    Mode: All
+
+    List: []
+
+  Steps: 
+
+    1: 
+
+      Click Trigger: 
+
+        Trigger: ""
+
+        Script: 
+
+          - ENGAGE
+
+          - WAIT 1
+
+          - CHAT "So, You gave him the Astelons? Great."
+
+          - WAIT 1
+
+          - CHAT "So I've got one more task, There's this rogue Thief that left the clan."
+
+          - WAIT 3
+
+          - CHAT "You don't mind Killing him for us Right? He's done a lot of trouble."
+
+          - WAIT 5
+
+          - CHAT "I Can't kill him because I'm a Public figure, If it was found Out We'll be destroyed."
+
+          - WAIT 3
+
+          - CHAT "If you do this for Us I'll grant you the title Of Thief!"
+
+          - WAIT 3
+
+          - EXECUTE as_op "questadmin give <player.name> The Thief Trial - 2"
+
+          - DISENGAGE 
+
+    2:      
+
+WarriorTutorial1:
+
+  Type: Interact
+
+  Requirements: 
+
+    Mode: All
+
+    List: []
+
+  Steps: 
+
+    1: 
+
+      Click Trigger: 
+
+        Trigger: ""
+
+        Script:
+
+          - ENGAGE
+
+          - CHAT "'Eya there, ma man!"
+
+          - WAIT 3
+
+          - CHAT "Ya wanna be as strong as me?"
+
+          - WAIT 4
+
+          - CHAT "Become a warrior like meh?"
+
+          - WAIT 2
+
+          - CHAT "He he he, that'll take a lot."
+
+          - WAIT 3
+
+          - CHAT "But eh, I believe in ya, man!"
+
+          - WAIT 3
+
+          - CHAT "Ya look strong and brave, o'ready got em muscles I see!"
+
+          - WAIT 2
+
+          - CHAT "Lemme think... Prove yer can be a true warrior by going in the forest, and kill 10 monsters ( Lucy's Note; Zombies ). Hue, hue."
+
+          - WAIT 3
+
+          - CHAT "I'll send one of our spies to secretly look after you! He'll make sure you're skilled enough."
+
+          - WAIT 4
+
+          - NARRATE "Oh, and err by the forest I mean...just kill some monsters when it's dark, 'ere outside the capital."
+
+          - EXECUTE as_op "questadmin give <player.name> The Warrior Trial - 1"
+
+          - EXECUTE as_op "warp Capital"
+
+          - EXECUTE as_op "ce give <player.name> 258 Shockwave 1"
+
+          - DISENGAGE
+
+          - ZAP WarriorTutorial1:2
+
+          - ZAP MageTutorial1:2
+
+          - ZAP ThiefTutorial1:2
+
+          - ZAP RangerTutorial1:2
+
+          - ZAP MageArthur:2
+
+          - ZAP RangerTutorial2:2
+
+          - ZAP ThiefTutorial2:2
+
+    2:
+
+      Click Trigger: 
+
+        Trigger: ""
+
+        Script:
+
+          - EXECUTE as_op "warp Capital"  
+
+WarriorTutorial2:
+
+  Type: task
+
+  Script:
+
+   - WAIT 3
+
+   - CHAT npc:77 "Ya did a good job eh?"
+
+   - WAIT 4
+
+   - CHAT npc:51 "I see how good ya are at slaying dem monsters!"
+
+   - WAIT 4
+
+   - CHAT npc:51 "So, Master Warrior's got one last mission for ya."
+
+   - WAIT 3
+
+   - CHAT npc:51 "If ya kill 20 pigs, he'll give you the title of Warrior! Now go!"
+
+   - EXECUTE as_op "questadmin give <player.name> The Warrior Trial - 2"
+
+ThiefTutorialEnd:
+
+  Type: Task
+
+  Script:
+
+    - WAIT 1
+
+    - CHAT npc:76 "I see you killed the Rogue thief, congratulations."
+
+    - WAIT 3
+
+    - NARRATE "You hear shuffling noises from the bushes.."
+
+    - WAIT 2
+
+    - CHAT npc:76 "Master Thief told me you can get the title if you killed him, so.."
+
+    - WAIT 3
+
+    - Narrate "You hear another shuffling noise..."
+
+    - CHAT npc:76 "Congratulations, you are officialy a thief!"
+
+    - EXECUTE as_server "lp user <player.name> parent add thief"
+
+    - EXECUTE as_op "wandp <player.name> rabbitboots"
+
+
+
+WarriorTutorialEnd:
+
+  Type: Task
+
+  Script:
+
+     - WAIT 1
+
+     - CHAT npc:77 "Hmm, ya killed dem pigs didn't cha?"
+
+     - Wait 3
+
+     - CHAT npc:77 "Good, here.. you completed your tasks, congrats mate."
+
+     - EXECUTE as_op "ce give <player.name> 307 Hardened 1"
+
+     - EXECUTE as_server "lp user <player.name> parent add warrior"
+
+BankTutorial:
+
+  Type: Interact
+
+  Requirements: 
+
+    Mode: All
+
+    List: []
+
+  Steps: 
+
+    1: 
+
+      Click Trigger: 
+
+        Trigger: ""
+
+        Script:
+
+        - WAIT 1
+
+        - CHAT "Hey! Like my new looks? Picked it up from some famous girl!"
+
+        - WAIT 3
+
+        - CHAT "I heard you need to check out the bank? It's easy! Go ahead and go to /warp bank!"
+
+        - WAIT 3
+
+        - CHAT "From there, you right click The Banker, and ask for what you want to put inside!."
+
+        - WAIT 4
+
+        - CHAT "Sadly, the bank is currently closed, it's still being worked one!"
+
+        - WAIT 2
+
+        - CHAT "Well, Off you go!"
+
+        - NARRATE "The skin is a gift from the staff team!"
